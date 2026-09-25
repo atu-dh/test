@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Vazirmatn', system-ui, sans-serif;
+  --color-green-primary: #12BD77;
+  --color-green-dark: #0E9A61;
+  --color-green-deeper: #0A7A4E;
+  --color-green-light: #E8FBF3;
+  --color-green-subtle: #F0FDF7;
+  --color-charcoal: #1A1A2E;
+  --color-near-black: #0F0F1A;
+  --color-gray-soft: #F5F5F7;
+  --color-gray-mid: #E8E8EC;
+  --color-gray-text: #6B7280;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+* {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+}
+
+body {
+  color: #1A1A2E;
+  background-color: #ffffff;
+}
+
+/* Hide scrollbar by default, show on hover */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+  opacity: 0;
+}
+body:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* Smooth transitions globally */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* RTL table */
+table {
+  direction: rtl;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: #12BD7730;
+  color: #0E9A61;
+}
+
+/* Scroll animation utility */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+/* Active nav item */
+.nav-link-active {
+  color: #12BD77 !important;
+  font-weight: 600;
+}
+
+/* Grayscale to color logo transition */
+.logo-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+}
+.logo-grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.03);
+}

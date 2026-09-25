@@ -1,0 +1,11 @@
+{
+  "title": "ATU-DH",
+  "description": "Create polished, modern landing pages tailored for academic audiences, ensuring responsive design and adherence to specified UX and branding guidelines.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
